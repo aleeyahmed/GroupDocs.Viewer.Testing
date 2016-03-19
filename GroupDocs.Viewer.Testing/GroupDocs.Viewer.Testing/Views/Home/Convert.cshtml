@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Convet File ";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+@using (Html.BeginForm("Convert",
+                                    "Home",
+                                    FormMethod.Post,
+                                    new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload File:</label>
+    <input type="file" name="file" id="file" /><br><br>
+    <input type="submit" value="Convert File" />
+    <br><br>
+    @ViewBag.Message
+}
+@using GroupDocs.Viewer.Testing.Models
+@model  UploadedFiles
+<div class="row">
+    <div class="col-lg-2" style="height:500px; margin-top:100px">
+        <h4>
+            <div id="output1"></div>
+            <ol id="paging">
+                <li>Prev</li>
+                <li>Page #n</li>
+                <li>Page #n</li>
+                <li>Next</li>
+            </ol>
+            <div id="output"></div>
+        </h4>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="~/Content/jquery.paging.js"></script>
+    <script src="~/Content/jquery.easy-paging.js"></script>
+    <script src="~/Content/jquery.paging.min.js"></script>
+    @{int count = 0; }
+
+
+    <div class="col-md-10 text-center " style="overflow:scroll; height:1000px; border:groove;">
+        @{
+            foreach (string list in UploadedFiles.myList)
+            {
+                count++;
+                <h3>@count</h3>
+                <img id="img+@count.ToString()" src="/Content/images/@list" />
+                <hr />
+            }
+        }
+    </div>
+    <script>
+        $("#paging").easyPaging(@count*10, {
+            onSelect: function (page) {
+                $("#output1").html("Total Pages : " + @count.ToString());
+                window.location.href = "#img+"+page;
+                $("#output").html("You are on page " + page);
+
+            }
+        });
+    </script>
+</div>

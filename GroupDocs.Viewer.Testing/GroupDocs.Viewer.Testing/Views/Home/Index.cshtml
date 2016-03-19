@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*@using GroupDocs.Viewer.Testing.Models
+
+@model  HomeViewModel
+
+    @{
+        HomeViewModel.Main();
+    }*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+
+<div class="row">
+
+    <div class="col-lg-2" style="height:500px; margin-top:100px">
+
+        <div id="output1"></div>
+        <ol id="paging">
+            <li>Prev</li>
+            <li>Page #n</li>
+            <li>Page #n</li>
+            <li>Page #n</li>
+            <li>Next</li>
+        </ol>
+
+        <div id="output"></div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="~/Content/jquery.paging.js"></script>
+    <script src="~/Content/jquery.easy-paging.js"></script>
+    <script src="~/Content/jquery.paging.min.js"></script>
+
+    <script>
+        $("#paging").easyPaging(80, {
+            onSelect: function (page) {
+                $("#output1").html("Total Pages : " + 8);
+                window.location.href = "#img"+page;
+                $("#output").html("You are on page " + page);
+               
+            }
+        });
+    </script>
+    <h3>Sample file converted with GroupDocs.Viewer to convert new please click Convert New file on Main Menu</h3>
+    <div class="col-md-10 text-center " style="overflow:scroll; height:800px; border:groove;">
+        <h5>1</h5>
+        <img id="img1" src="~/Content/WordFiles/SDD1.jpeg" />
+        <hr />
+        <h5>2</h5>
+        <img id="img2" src="~/Content/images/SDD2.jpeg" />
+        <hr />
+        <h5>3</h5>
+        <img id="img3" src="~/Content/images/SDD.jpeg" />
+        <hr />
+        <h5>4</h5>
+        <img id="img4" src="~/Content/images/SDD.jpeg" />
+        <hr />
+        <h5>5</h5>>
+        <img id="img5" src="~/Content/images/SDD.jpeg" />
+        <hr />
+        <h5>6</h5>
+        <img id="img6" src="~/Content/images/SDD.jpeg" />
+        <hr />
+        <h5>7</h5>>
+        <img id="img7" src="~/Content/images/SDD.jpeg" />
+        <hr />
+        <h5>8</h5>
+        <img id="img8" src="~/Content/images/SDD.jpeg" />
+ 
+    </div>
+
+</div>
+
