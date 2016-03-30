@@ -1,11 +1,11 @@
-Introduction
+**Document Viewer Using GroupDocs.Viewer 3.0.0 API**
 
-Technical Evaluation Assignment for the position of Support Developer at Aspose Pty Ltd to Create a Document Viewer in ASP.NET using GroupDocs.Viewer 3.0.0 API, ASP.NET by Ali Ahmed Sahi
+Technical Evaluation Assignment for the position of Support Developer atÂ Aspose Pty Ltd toÂ Create a Document Viewer inÂ ASP.NETÂ using GroupDocs.Viewer 3.0.0 API,Â ASP.NETÂ by Ali Ahmed Sahi
 
-GroupDocs.Viewer is a powerful document viewer component that allows you to display over 50 document formats in your .NET applications. The viewer can both rasterize documents and convert them to SVG+HTML+CSS, delivering true-text high-fidelity rendering. Supported file formats include:
+GroupDocs.Viewer is aÂ powerful document viewer component that allows you to display over 50 document formats in your .NET applications. The viewer can both rasterize documents and convert them to SVG+HTML+CSS, delivering true-text high-fidelity rendering. Supported file formats include:
 
 Microsoft Office
-Microsoft Visio
+MicrosoftÂ Visio
 Microsoft Project
 Outlook documents
 PDF
